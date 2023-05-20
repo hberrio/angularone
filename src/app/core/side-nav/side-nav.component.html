@@ -1,0 +1,14 @@
+<div class="container" [class.is-mobile]="(isHandset$ | async)" [style.marginTop.px]="(isHandset$ | async) ? 0 : 65">
+    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="(isHandset$ | async) ? 56 : 0">
+        <mat-sidenav #sidenav [mode]="(isHandset$ | async) ? 'over' : 'side'" [fixedInViewport]="(isHandset$ | async)"
+            fixedTopGap="56" [(opened)]="opened">
+            <mat-nav-list>
+                <button mat-button (click)="sidenav.toggle(); nextCount()">Toggle</button>
+                <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

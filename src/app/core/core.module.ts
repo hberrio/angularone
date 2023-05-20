@@ -3,20 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { CoreRoutingModule } from './core-routing.module';
 import { HeaderComponent } from './header/header.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from 'src/material/material.module';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SidenavComponent
+    SideNavComponent,
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
     MaterialModule
   ],
-  exports: [HeaderComponent, SidenavComponent]
+  exports: [HeaderComponent, SideNavComponent]
 })
 export class CoreModule { }
