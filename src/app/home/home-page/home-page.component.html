@@ -1,10 +1,10 @@
 <mat-toolbar color="primary">Web Page</mat-toolbar>
 <div class="grid-container">
-    <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile [colspan]="2" [rowspan]="2">
+    <mat-grid-list rowHeight="2:1" [cols]="(isHandset$ | async) ? 1 : (isTablet$ | async) ? 2 : 4">
+        <mat-grid-tile>
             <div>
                 <h1 class="mat-display-1">Hello, world!</h1>
-                <div class="mat-body">
+                <div >
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Voluptate fugiat expedita minus aspernatur quasi,
                     voluptatum esse eligendi nisi harum dicta iure omnis incidunt!
@@ -64,5 +64,7 @@
         <mat-grid-tile>Title 5</mat-grid-tile>
         <mat-grid-tile>Title 6</mat-grid-tile>
         <mat-grid-tile>Title 7</mat-grid-tile>
+        <mat-grid-tile>Title 8</mat-grid-tile>
+
     </mat-grid-list>
 </div>
