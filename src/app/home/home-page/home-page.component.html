@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">Web Page</mat-toolbar>
 <div class="grid-container">
-    <mat-grid-list rowHeight="2:1" [cols]="(isHandset$ | async) ? 1 : (isTablet$ | async) ? 2 : 4">
+    <mat-grid-list rowHeight="2:1" [cols]="(isHandset$ | async) ? 1 : (isTablet$ | async) ? 2 : (isWeb$ | async) ? 3 : 4">
         <mat-grid-tile>
             <div>
                 <h1 class="mat-display-1">Hello, world!</h1>

@@ -54,5 +54,10 @@ export class SideNavComponent implements OnInit {
   nextCount() {
     this.SideNavHeaderCommunicationService.nextCount();
   }
+  onBackdropClick() {
+    // Handle the click event on the backdrop here
+    // You can show a message, perform an action, etc.
+    console.log('Backdrop clicked');
+}
 
 }
