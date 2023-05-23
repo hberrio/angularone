@@ -1,6 +1,6 @@
-<div class="container" [class.is-mobile]="(isHandset$ | async)" [style.marginTop.px]="(isHandset$ | async) ? 0 : 65">
-    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="(isHandset$ | async) ? 56 : 0" (backdropClick)="nextCount()">
-        <mat-sidenav #sidenav [mode]="(isHandset$ | async) ? 'over' : 'side'" [fixedInViewport]="(isHandset$ | async)"
+<div class="container" [class.is-mobile]="(isXSmall$ | async)" [style.marginTop.px]="(isXSmall$ | async) ? 0 : 65">
+    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="(isXSmall$ | async) ? 56 : 0" (backdropClick)="nextCount()">
+        <mat-sidenav #sidenav [mode]="(isXSmall$ | async) ? 'over' : (isSmall$ | async) ? 'over' : 'side'" [fixedInViewport]="(isXSmall$ | async)"
             fixedTopGap="56" [(opened)]="opened">
             <mat-nav-list>
                 <button mat-button (click)="sidenav.toggle(); nextCount()">Toggle</button>

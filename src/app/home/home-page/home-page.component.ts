@@ -10,19 +10,24 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class HomePageComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isXSmall$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.XSmall)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
-  isTablet$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Tablet)
+  isSmall$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Small)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
-  isWeb$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Web)
+  isMedium$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Medium)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+  isLarge$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Large)
     .pipe(
       map(result => result.matches),
       shareReplay()
@@ -31,5 +36,4 @@ export class HomePageComponent {
     constructor(
       private breakpointObserver: BreakpointObserver,
     ) {}
-
 }
